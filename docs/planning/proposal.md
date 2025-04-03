@@ -59,7 +59,7 @@ Implement an option price calculator on the MSP430, with "signal generating func
 
 **The new hardware or software modules are:**
 1. The rotary encoder is a new module, we have not yet used it. It will be used to input values for the different parameters.
-2. As far as a Black-Scholes module, this will be interesting to implement. Will have to look in to how to implement a log normal distribution simplification.
+2. As far as a Black-Scholes module, this will be interesting to implement. Will have to look in to how to implement a log normal distribution simplification.  
 
 
 The Master will be responsible for: Handling user input, and doing Black-Scholes model calculations, sending information to slave via I2C.
@@ -73,5 +73,5 @@ The Slave(s) will be responsible for: Taking information from Master (expected a
 
 ### Argument for Desired Prescaler
 
-	Shooting for 95% because I have 3 inputs and 3 outputs, I'm using a new piece of hardware (the rotary encoder), and the software calculation using a Black-Scholes model is new and possibly difficult as I understand it now.  There will need to be approximations for a normal distribution. This is a real world application of the MSP430, as trading desks use (much more complex than this) versions of this to make decisions. 
+	Shooting for 95% because I have 3 inputs and 3 outputs, I'm using a new piece of hardware (the rotary encoder), and the software calculation using a Black-Scholes model is new and possibly difficult as I understand it nowg.  There will need to be approximations for a normal distribution. This is a real world application of the MSP430, as trading desks use (much more complex than this) versions of this to make decisions. 
 
