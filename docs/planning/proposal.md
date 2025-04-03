@@ -73,5 +73,5 @@ The Slave(s) will be responsible for: Taking information from Master (expected a
 
 ### Argument for Desired Prescaler
 
-	Shooting for 95% because I have 3 inputs and 3 outputs, I'm using a new piece of hardware (the rotary encoder), and the software calculation using a Black-Scholes model is new and difficult as I see it.  There will need to be approximations for a normal distribution. This is a real world application of the MSP430, as trading desks use (much more complex than this) versions of this to make decisions. 
+	Shooting for 95% because I have 3 inputs and 3 outputs, I'm using a new piece of hardware (the rotary encoder), and the software calculation using a Black-Scholes model is new and possibly difficult as I understand it now.  There will need to be approximations for a normal distribution. This is a real world application of the MSP430, as trading desks use (much more complex than this) versions of this to make decisions. 
 
