@@ -1,0 +1,44 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  "version": "0.2.0",
+  "configurations": [
+    {
+            "name": "i2c-led-bar",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "i2c-led-bar",
+                "resourceId": "/i2c-led-bar"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSP430FR2310.ccxml": {
+                    "TI MSP430 USB1/MSP430": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+    }, {
+            "name": "controller",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "controller",
+                "resourceId": "/controller"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSP430FR2355.ccxml": {
+                    "TI MSP430 USB1/MSP430": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    },
+                    "TI MSP430 USB2_0/MSP430": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    },
+                    "TI MSP430 USB1_0/MSP430": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues>\n\n  <property id=\"ModuleClockControl2\">\n    <curValue>1</curValue>\n  </property>\n\n  <property id=\"ModuleClockControl3\">\n    <curValue>1</curValue>\n  </property>\n\n  <property id=\"ModuleClockControl4\">\n    <curValue>1</curValue>\n  </property>\n\n  <property id=\"ModuleClockControl5\">\n    <curValue>1</curValue>\n  </property>\n\n  <property id=\"ModuleClockControl6\">\n    <curValue>1</curValue>\n  </property>\n\n  <property id=\"ModuleClockControl7\">\n    <curValue>1</curValue>\n  </property>\n\n  <property id=\"ModuleClockControl8\">\n    <curValue>0</curValue>\n  </property>\n\n  <property id=\"ModuleClockControl9\">\n    <curValue>0</curValue>\n  </property>\n\n  <property id=\"ModuleClockControlA\">\n    <curValue>0</curValue>\n  </property>\n\n  <property id=\"ModuleClockControlB\">\n    <curValue>0</curValue>\n  </property>\n\n  <property id=\"ModuleClockControlC\">\n    <curValue>0</curValue>\n  </property>\n\n  <property id=\"ModuleClockControlD\">\n    <curValue>0</curValue>\n  </property>\n\n  <property id=\"ModuleClockControlE\">\n    <curValue>0</curValue>\n  </property>\n\n  <property id=\"ModuleClockControlF\">\n    <curValue>0</curValue>\n  </property>\n\n  <property id=\"MSP430EraseStartAddress\">\n    <curValue>8000</curValue>\n  </property>\n\n  <property id=\"MSP430EraseEndAddress\">\n    <curValue>ffff</curValue>\n  </property>\n\n  <property id=\"FlashFiles\">\n    <curValue></curValue>\n  </property>\n\n</PropertyValues>\n"
+                    }
+                }
+            }
+        }
+  ]
+}

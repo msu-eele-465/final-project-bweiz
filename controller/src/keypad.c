@@ -53,7 +53,7 @@ void check_key() {
     int i, flag = 0;
     if (input_index == 3) {                                 // Only check after 4 digits entered
 
-        for(i=0; i<3; i++) {
+        for(i=0; i<5; i++) {
             if(keypad_input[i] != code[i]) {
                 flag = 1;
             }
