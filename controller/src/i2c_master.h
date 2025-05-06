@@ -7,7 +7,7 @@
 void i2c_master_setup(void);
 
 void update_LCD(int modeID, int temperature, int window_size);
-void i2c_write_led(unsigned int pattNum);
+void i2c_write_led(int pattNum);
 void i2c_write_lcd(unsigned int pattNum, char character);
 volatile int send_buff;
 volatile int ready_to_send;
