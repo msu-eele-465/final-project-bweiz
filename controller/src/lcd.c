@@ -68,14 +68,7 @@ void update_key(char c) {
     lcd_string_write(s);
 }
 
-void setup_lcd() {
-    // data pins as output
-    P2DIR |= (BIT0|BIT1|BIT2|BIT4);
-    P2OUT &= ~(BIT0|BIT1|BIT2|BIT4);
-    // control pins as output 
-    P4DIR |= (BIT4|BIT6|BIT7);
-    P4OUT &= ~(BIT4|BIT6|BIT7);
-}
+
 
 // Clear display
 void lcd_clear(void) {
@@ -100,4 +93,26 @@ void lcd_putc(char c) {
 
 void lcd_puts(const char* s) {
     while (*s) lcd_putc(*s++);
+}
+
+void setup_lcd() {
+        // P2.0,1,2,4 GPIO for D4–D7 
+    P2SEL0 &= ~(BIT0|BIT1|BIT2|BIT4);
+    P2SEL1 &= ~(BIT0|BIT1|BIT2|BIT4);
+
+    // P4.4 (RS), P4.6 (RW), P4.7 (E) into GPIO 
+    P4SEL0 &= ~(BIT4|BIT6|BIT7);
+    P4SEL1 &= ~(BIT4|BIT6|BIT7);
+    // data pins as output
+    P2DIR |= (BIT0|BIT1|BIT2|BIT4);
+    P2OUT &= ~(BIT0|BIT1|BIT2|BIT4);
+    // control pins as output 
+    P4DIR |= (BIT4|BIT6|BIT7);
+    P4OUT &= ~(BIT4|BIT6|BIT7);
+        // Init LCD
+    lcd_raw_send(0b110000100010, 3); // Turn on LCD in 2-line mode
+    lcd_raw_send(0b00001100, 2); // Display on, cursor off, blink off
+    lcd_raw_send(0b00000001, 2); // Clear display
+    lcd_raw_send(0b00000110, 2); // Increment mode, entire shift off
+
 }

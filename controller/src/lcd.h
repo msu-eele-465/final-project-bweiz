@@ -27,5 +27,4 @@ void lcd_set_cursor(uint8_t row, uint8_t col);
 void lcd_putc(char c);
 void lcd_puts(const char *str);
 
-// ─────────────────────────────────
 #endif // LCD_H

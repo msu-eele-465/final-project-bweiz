@@ -28,7 +28,7 @@ void i2c_master_setup(void) {
 
  
 
- void i2c_write_led(unsigned int pattNum) {
+ void i2c_write_led(int pattNum) {
     while(i2c_busy);
     i2c_busy = 1;
 
